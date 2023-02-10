@@ -23,7 +23,7 @@
             <ul class="navigation-list">
               <li class="navigation-item">
                 <div class="navigation-dropdown">
-                  <button class="dropdown-button navigation-user-link" type="button">Каталог</button>
+                  <button class="dropdown-button" type="button">Каталог</button>
                   <ul class="dropdown-list">
                     <li class="dropdown-item">
                       <a class="dropdown-link dropdown-link-current" href="index.html">Новинки</a>
@@ -44,35 +44,31 @@
                 </div>
               </li>
               <li class="navigation-item">
-                <a class="link-styles navigation-user-link" href="#">Доставка и&nbsp;оплата</a>
+                <a class="navigation-user-link" href="#">Доставка и&nbsp;оплата</a>
               </li>
               <li class="navigation-item">
-                <a class="link-styles navigation-user-link" href="#">О компании</a>
+                <a class="navigation-user-link" href="#">О компании</a>
               </li>
             </ul>
           </nav>
           <div class="navigation-control">
-            <a class="link-styles navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+            <a class="navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
             <div class="dropdown-search">
-              <button class="button-search navigation-styles" type="button">
+              <button class="button-search" type="button">
                 <span class="visually-hidden">Поиск.</span>
-                <svg class="search-icon" aria-hidden="true" focusable="false" role="img"
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                  <path fill="#2D3440" fill-rule="evenodd"
-                    d="M2.663 8.188a4.667 4.667 0 1 1 8.028 3.237.671.671 0 0 0-.123.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z"
-                    clip-rule="evenodd" />
-                </svg>
               </button>
               <form class="dropdown-search-form" action="https://echo.htmlacademy.ru/" method="get">
-                <input class="inputs-form dropdown-search-input" name="dropdown-search-input" type="text"
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс dropdown-search-error -->
+                <input class="dropdown-search-input" name="dropdown-search-input" type="search"
                   placeholder="Поиск по сайту" aria-label="Поиск по сайту.">
               </form>
             </div>
             <div class="dropdown-login">
-              <button class="buttons-login navigation-styles" type="button">
+              <button class="buttons-login" type="button">
                 <svg class="icon-login" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                  <path fill="#2D3440" fill-rule="evenodd"
+                  <path fill-rule="evenodd"
                     d="M9 2.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 0 1 0-1.333h2.666A.667.667 0 0 0 13 13.19V3.858a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 2.525ZM5.862 4.72c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.774l-3.328 3.33a.667.667 0 1 1-.943-.944l2.195-2.195h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 5.663a.667.667 0 0 1 0-.943Z"
                     clip-rule="evenodd" />
                 </svg>
@@ -80,8 +76,12 @@
               </button>
               <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
                 <h2 class="banner-word dropdown-form-title">Личный кабинет</h2>
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс dropdown-login-error -->
                 <input class="input-mail-dropdown" name="input-mail-dropdown" type="email"
                   placeholder="email@example.com" required aria-label="Введите вашу почту.">
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс dropdown-login-error -->
                 <input class="input-password-dropdown" name="input-password-dropdown" type="password" required
                   aria-label="Введите пароль." value="123456">
                 <div class="button-form-wrapper">
@@ -94,10 +94,10 @@
               </form>
             </div>
             <div class="dropdown-basket">
-              <button class="basket-buttons navigation-styles" type="button">
+              <button class="basket-buttons" type="button">
                 <svg class="icon-basket" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                  <path fill="#2D3440" fill-rule="evenodd"
+                  <path fill-rule="evenodd"
                     d="M1.167 2.108a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.493.493 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                     clip-rule="evenodd" />
                 </svg>
@@ -178,7 +178,7 @@
                     и&nbsp;молока с&nbsp;вкуснейшим клубничным джемом&nbsp;&mdash; это идеальный десерт
                     для всей семьи.</p>
                   <!-- Для проверки состояния disable убрать у сслыки href -->
-                  <a class="link-styles buttons-style" href="">Заказать</a>
+                  <a class="buttons-style" href="">Заказать</a>
                 </div>
                 <div class="image-content">
                   <img class="images-current" src="./images/content-image/big-ice-strawberry.png"
@@ -192,7 +192,7 @@
                   <p class="slider-description">Сливочное мороженое с&nbsp;ярким банановым вкусом подарит
                     вам свежесть и&nbsp;наслаждение даже в&nbsp;самый жаркий летний день.</p>
                   <!-- Для проверки состояния disable убрать у сслыки href -->
-                  <a class="link-styles buttons-style" href="">Заказать</a>
+                  <a class="buttons-style" href="">Заказать</a>
                 </div>
                 <div class="image-content">
                   <img class="images-current" src="./images/content-image/big-ice-banana.png"
@@ -206,7 +206,7 @@
                   <p class="slider-description">Необычный сладкий десерт с&nbsp;карамельным топпингом и
                     кусочками зефира завоюет<br> сердца сладкоежек всех возрастов.</p>
                   <!-- Для проверки состояния disable убрать у сслыки href -->
-                  <a class="link-styles buttons-style" href="">Заказать</a>
+                  <a class="buttons-style" href="">Заказать</a>
                 </div>
                 <div class="image-content">
                   <img class="images-current" src="./images/content-image/big-ice-brulee.png"
@@ -220,7 +220,7 @@
               <button class="button-slider" type="button">
                 <svg class="arrow-icon" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                  <path fill="#FCFCFC" fill-rule="evenodd"
+                  <path fill-rule="evenodd"
                     d="M8.865 13.135a.665.665 0 0 0 .94-.94L5.604 7.994l4.201-4.202a.665.665 0 0 0-.94-.94L4.196 7.52l-.003.003c-.26.26-.26.681 0 .94l4.672 4.672Z"
                     clip-rule="evenodd" />
                 </svg>
@@ -230,7 +230,7 @@
               <button class="button-slider button-slider-rotate" type="button">
                 <svg class="arrow-icon" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                  <path fill="#FCFCFC" fill-rule="evenodd"
+                  <path fill-rule="evenodd"
                     d="M8.865 13.135a.665.665 0 0 0 .94-.94L5.604 7.994l4.201-4.202a.665.665 0 0 0-.94-.94L4.196 7.52l-.003.003c-.26.26-.26.681 0 .94l4.672 4.672Z"
                     clip-rule="evenodd" />
                 </svg>
@@ -299,7 +299,7 @@
               <p class="raspberry-title">При покупке 2&nbsp;кг любого фруктового мороженого добавим
                 в&nbsp;ваш заказ банку малинового варенья бесплатно.</p>
               <!-- Для проверки состояния disable убрать у сслыки href -->
-              <a class="link-styles banner-link buttons-style" href="#">Хочу подарок</a>
+              <a class="banner-link buttons-style" href="#">Хочу подарок</a>
             </div>
             <div class="banner marshmallow marshmallow-background">
               <h2 class="banner-word order-text">Маршмеллоу даром!</h2>
@@ -307,7 +307,7 @@
                 зефирок
                 совершенно бесплатно.</p>
               <!-- Для проверки состояния disable убрать у сслыки href -->
-              <a class="link-styles banner-link buttons-style" href="#">Хочу подарок</a>
+              <a class="banner-link buttons-style" href="#">Хочу подарок</a>
             </div>
           </div>
         </div>
@@ -331,7 +331,7 @@
                     <span class="visually-hidden">Корзина</span>
                     <svg class="basket-logo" aria-hidden="true" focusable="false" role="img"
                       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                      <path fill="#2D3440" fill-rule="evenodd"
+                      <path fill-rule="evenodd"
                         d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                         clip-rule="evenodd" />
                     </svg>
@@ -354,7 +354,7 @@
                     <span class="visually-hidden">Корзина</span>
                     <svg class="basket-logo" aria-hidden="true" focusable="false" role="img"
                       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                      <path fill="#2D3440" fill-rule="evenodd"
+                      <path fill-rule="evenodd"
                         d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                         clip-rule="evenodd" />
                     </svg>
@@ -377,7 +377,7 @@
                     <span class="visually-hidden">Корзина</span>
                     <svg class="basket-logo" aria-hidden="true" focusable="false" role="img"
                       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                      <path fill="#2D3440" fill-rule="evenodd"
+                      <path fill-rule="evenodd"
                         d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                         clip-rule="evenodd" />
                     </svg>
@@ -400,7 +400,7 @@
                     <span class="visually-hidden">Корзина</span>
                     <svg class="basket-logo" aria-hidden="true" focusable="false" role="img"
                       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
-                      <path fill="#2D3440" fill-rule="evenodd"
+                      <path fill-rule="evenodd"
                         d="M1.167 1.25a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167ZM5.69 9.544 4.878 5.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                         clip-rule="evenodd" />
                     </svg>
@@ -452,8 +452,9 @@
                 <form class="subscribes" action="https://echo.htmlacademy.ru/" method="post">
                   <label class="label-subscribes">
                     <span class="visually-hidden">Введите вашу почту.</span>
-                    <input class="inputs-form subscribes-field" type="email" name="inputs-mail"
-                      placeholder="email@example.com">
+                    <!-- Для неактивного состояния повесить disabled -->
+                    <!-- Для вызова ошибки добавить класс subscribes-error -->
+                    <input class="subscribes-field" type="email" name="inputs-mail" placeholder="email@example.com">
                   </label>
                   <button class="button-form button-subscribes" type="submit">Отправить</button>
                 </form>
@@ -476,37 +477,45 @@
               <p class="description-text delivery-description-form">Укажите адрес и&nbsp;дату доставки,
                 и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы
                 подтвердить заказ.</p>
-              <div class="wrapper-form-contacts">
-                <label class="label-date">
-                  <span class="title-form title-date">Дата</span>
-                  <span class="tooltip">
-                    <button class="tooltip-button" aria-labelledby="tooltip-date" type="button">
-                    </button>
-                    <span class="tooltip-text" role="tooltip" id="tooltip-date">
-                      Укажите дату доставки
+              <div class="wrapper-content-form">
+                <div class="wrapper-form-contacts">
+                  <span class="label-date form-label-icon">
+                    <label class="label-date title-form" for="delivery-inputs-date">Дата</label>
+                    <span class="tooltip">
+                      <button class="tooltip-button" aria-labelledby="tooltip-date" type="button"></button>
+                      <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-date">
+                        <span class="tooltip-text">Укажите дату доставки</span>
+                      </span>
                     </span>
                   </span>
-                  <input class="inputs-form inputs-date" type="text" name="delivery-inputs-date"
-                    placeholder="01.04.2020" required>
-                </label>
-                <label class="label-phone">
-                  <span class="title-form title-phone">Телефон</span>
-                  <input class="inputs-form inputs-phone" type="tel" name="delivery-inputs-phone"
-                    placeholder="+7 800 999-00-00" required>
-                </label>
+                  <!-- Для неактивного состояния повесить disabled -->
+                  <!-- Для вызова ошибки добавить класс delivery-error -->
+                  <input class="inputs-delivery inputs-date" type="text" name="delivery-inputs-date"
+                    id="delivery-inputs-date" placeholder="01.04.2020" required>
+                </div>
+                <div class="wrapper-phone">
+                  <label class="label-phone title-form" for="delivery-inputs-phone">Телефон</label>
+                  <!-- Для неактивного состояния повесить disabled -->
+                  <!-- Для вызова ошибки добавить класс delivery-error -->
+                  <input class="inputs-delivery inputs-phone" type="tel" name="delivery-inputs-phone"
+                    id="delivery-inputs-phone" placeholder="+7 800 999-00-00" required>
+                </div>
               </div>
-              <label class="label-address">
-                <span class="title-form address-title">Адрес</span>
-                <span class="tooltip">
-                  <button class="tooltip-button" aria-labelledby="tooltip-address" type="button">
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-address">
-                    Введите название<br> улицы, дома и квартиры
+              <div class="wrapper-address">
+                <span class="label-address">
+                  <label class="label-address title-form" for="delivery-inputs-address">Адрес</label>
+                  <span class="tooltip" aria-labelledby="tooltip-address">
+                    <button class="tooltip-button" aria-labelledby="tooltip-address" type="button"></button>
+                    <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-address">
+                      <span class="tooltip-text">Введите название улицы, дома и&nbsp;квартиры</span>
+                    </span>
                   </span>
                 </span>
-                <input class="inputs-form inputs-address" type="text" name="delivery-inputs-address"
-                  placeholder="ул. Большая Конюшенная, 19/8" required>
-              </label>
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс delivery-error -->
+                <input class="inputs-delivery inputs-address" type="text" name="delivery-inputs-address"
+                  id="delivery-inputs-address" placeholder="ул. Большая Конюшенная, 19/8" required>
+              </div>
               <button class="button-form delivery-button-form" type="submit">Отправить</button>
             </form>
           </div>
@@ -566,10 +575,10 @@
             </li>
           </ul>
           <div class="footer-menu">
-            <h3 class="link-control-styles weight-current">Для поставщиков</h3>
-            <a class="link-control-styles footer-information" href="#">Наши документы</a>
-            <a class="link-control-styles footer-information" href="#">О производстве</a>
-            <a class="link-control-styles footer-information" href="#">Экологические стандарты</a>
+            <h3 class="weight-current">Для поставщиков</h3>
+            <a class="link-control-styles" href="#">Наши документы</a>
+            <a class="link-control-styles" href="#">О производстве</a>
+            <a class="link-control-styles" href="#">Экологические стандарты</a>
           </div>
           <div class="footer-copyright">
             <a class="link-academy" href="https://htmlacademy.ru/">
@@ -597,17 +606,23 @@
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal-id">
               <div class="modal-name-wrapper">
-                <input class="inputs-form modal-input-name" type="text" name="input-modal-name"
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс modal-error -->
+                <input class="inputs-modal modal-input-name" type="text" name="input-modal-name"
                   placeholder="Имя и фамилия" required aria-label="Введите ваше имя и фамилию.">
               </div>
               <div class="modal-mail-wrapper">
-                <input class="inputs-form modal-input-mail" type="email" name="input-modal-mail"
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс modal-error -->
+                <input class="inputs-modal modal-input-mail" type="email" name="input-modal-mail"
                   placeholder="email@example.com" required aria-label="Введите ваш e-mail.">
               </div>
             </div>
             <div class="modal-text-area">
               <div class="modal-free-wrapper">
-                <textarea class="inputs-form modal-input-free" name="text-area-form" placeholder="В свободной форме"
+                <!-- Для неактивного состояния повесить disabled -->
+                <!-- Для вызова ошибки добавить класс modal-error -->
+                <textarea class="inputs-modal modal-input-free" name="text-area-form" placeholder="В свободной форме"
                   rows="6" required aria-label="Что нужно привезти."></textarea>
               </div>
             </div>
