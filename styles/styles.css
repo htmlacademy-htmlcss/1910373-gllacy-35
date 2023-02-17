@@ -152,8 +152,8 @@ body {
   position: absolute;
   width: 16px;
   height: 16px;
-  -webkit-mask: url("../images/svg/arrow-down.svg");
-  mask: url("../images/svg/arrow-down.svg");
+  -webkit-mask: url("../images/svg/arrow-down-main.svg");
+  mask: url("../images/svg/arrow-down-main.svg");
   background-repeat: no-repeat;
   right: 16px;
   background-color: #2d3440;
@@ -330,8 +330,8 @@ body {
 .button-search::before {
   position: absolute;
   content: "";
-  -webkit-mask: url("../images/svg/search-icon.svg");
-  mask: url("../images/svg/search-icon.svg");
+  -webkit-mask: url("../images/svg/search-icon-main.svg");
+  mask: url("../images/svg/search-icon-main.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
@@ -2541,7 +2541,7 @@ body {
   border-radius: 20px;
   border: none;
   appearance: none;
-  background-image: url("../images/svg/arrow-down.svg");
+  background-image: url("../images/svg/arrow-down-main.svg");
   background-repeat: no-repeat;
   background-position: right 13px center;
   cursor: pointer;
@@ -2787,8 +2787,8 @@ body {
 }
 
 .control-mark::before {
-  -webkit-mask: url("../images/svg/checkbox-default.svg");
-  mask: url("../images/svg/checkbox-default.svg");
+  -webkit-mask: url("../images/svg/checkbox-unchecked.svg");
+  mask: url("../images/svg/checkbox-unchecked.svg");
   background-repeat: no-repeat;
   background-color: #2d3440;
   width: 16px;
@@ -2800,8 +2800,8 @@ body {
 }
 
 .control-mark::after {
-  -webkit-mask: url("../images/svg/checkbox-true.svg");
-  mask: url("../images/svg/checkbox-true.svg");
+  -webkit-mask: url("../images/svg/checkbox-checked.svg");
+  mask: url("../images/svg/checkbox-checked.svg");
   background-repeat: no-repeat;
   background-color: #2d3440;
   width: 16px;
@@ -2964,7 +2964,7 @@ body {
 }
 
 .pagination-arrow {
-  background-image: url("../images/svg/arrow-down.svg");
+  background-image: url("../images/svg/arrow-down-main.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
