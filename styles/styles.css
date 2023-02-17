@@ -650,6 +650,8 @@ body {
 .login-form {
   display: none;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
   position: absolute;
   padding: 48px 48px 52px 48px;
   background-color: #fcfcfc;
@@ -659,7 +661,14 @@ body {
 }
 
 .dropdown-form-title {
-  margin: 0 0 32px 0;
+  margin: 0;
+}
+
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .input-mail-dropdown {
@@ -669,7 +678,6 @@ body {
   border-radius: 4px;
   background-color: #ffffff;
   color: #2d3440;
-  margin: 0 0 16px 0;
   border: none;
 }
 
@@ -685,7 +693,6 @@ body {
   border-radius: 4px;
   background-color: #ffffff;
   color: #2d3440;
-  margin: 0 0 32px 0;
   border: none;
 }
 
@@ -747,6 +754,8 @@ body {
 .content-full {
   display: none;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
   position: absolute;
   background: #fcfcfc;
   border-radius: 4px;
@@ -756,19 +765,21 @@ body {
 }
 
 .cart-content-title {
-  margin: 0 0 32px 0;
+  margin: 0;
 }
 
 .cart-content-list {
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 32px 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  gap: 24px;
 }
 
 .cart-content-item {
-  margin: 0 0 24px 0;
+  margin: 0;
   position: relative;
 }
 
@@ -1371,10 +1382,6 @@ body {
   z-index: -1;
 }
 
-/* .product-wrapper {
-  margin: 0 0 16px 0;
-} */
-
 .product-element {
   font-style: normal;
   font-weight: 700;
@@ -1969,10 +1976,18 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 24px;
   padding: 40px 40px 42px 40px;
   background-color: #ffffff;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+}
+
+.address-wrapper {
+  gap: 12px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
 }
 
 .feedback-area {
@@ -2008,21 +2023,35 @@ body {
 }
 
 .feedback-address-title {
-  margin: 0 0 12px 0;
+  margin: 0;
   padding-right: 84px;
 }
 
 .feedback-address {
-  margin: 0 0 24px 0;
+  margin: 0;
+}
+
+.feedback-phone-wrapper {
+  gap: 12px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.wrapper-phone-mumber {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .feedback-text-phone {
-  margin: 0 0 12px 0;
+  margin: 0;
 }
 
 .number-phone-text {
   display: block;
-  margin: 0 0 32px 0;
+  margin: 0;
 }
 
 .feedback-number-phone {
@@ -2249,6 +2278,13 @@ body {
   height: 100%;
 }
 
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .modal-content {
   background: #fcfcfc;
   box-shadow: 0 15px 40px rgb(45 52 64 / 0.12);
@@ -2300,6 +2336,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 .inputs-modal {
@@ -2356,19 +2393,16 @@ body {
 
 .modal-input-name {
   padding: 14px 206px 14px 16px;
-  margin: 0 0 16px 0;
 }
 
 .modal-input-mail {
   padding: 14px 206px 14px 16px;
-  margin: 0 0 16px 0;
 }
 
 .modal-input-free {
   padding: 14px 16px;
   width: 100%;
   resize: none;
-  margin: 0 0 32px 0;
 }
 
 .button-send {

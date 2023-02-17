@@ -79,14 +79,16 @@
               </button>
               <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
                 <h2 class="banner-word dropdown-form-title">Личный кабинет</h2>
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс dropdown-login-error -->
-                <input class="input-mail-dropdown" name="input-mail-dropdown" type="email"
-                  placeholder="email@example.com" required aria-label="Введите вашу почту.">
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс dropdown-login-error -->
-                <input class="input-password-dropdown" name="input-password-dropdown" type="password" required
-                  aria-label="Введите пароль." value="123456">
+                <div class="login-form-wrapper">
+                  <!-- Для неактивного состояния повесить disabled -->
+                  <!-- Для вызова ошибки добавить класс dropdown-login-error -->
+                  <input class="input-mail-dropdown" name="input-mail-dropdown" type="email"
+                    placeholder="email@example.com" required aria-label="Введите вашу почту.">
+                  <!-- Для неактивного состояния повесить disabled -->
+                  <!-- Для вызова ошибки добавить класс dropdown-login-error -->
+                  <input class="input-password-dropdown" name="input-password-dropdown" type="password" required
+                    aria-label="Введите пароль." value="123456">
+                </div>
                 <div class="button-form-wrapper">
                   <button class="button-form button-login" type="submit">Войти</button>
                   <div class="faq-dropdown-form">
@@ -477,47 +479,47 @@
               <p class="description-text delivery-description-form">Укажите адрес и&nbsp;дату доставки,
                 и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы
                 подтвердить заказ.</p>
-                <div class="inputs-wrapper">
-              <div class="wrapper-content-form">
-                <div class="wrapper-form-contacts">
-                  <span class="label-date form-label-icon">
-                    <label class="label-date title-form" for="delivery-inputs-date">Дата</label>
-                    <span class="tooltip">
-                      <button class="tooltip-button" aria-labelledby="tooltip-date" type="button"></button>
-                      <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-date">
-                        <span class="tooltip-text">Укажите дату доставки</span>
+              <div class="inputs-wrapper">
+                <div class="wrapper-content-form">
+                  <div class="wrapper-form-contacts">
+                    <span class="label-date form-label-icon">
+                      <label class="label-date title-form" for="delivery-inputs-date">Дата</label>
+                      <span class="tooltip">
+                        <button class="tooltip-button" aria-labelledby="tooltip-date" type="button"></button>
+                        <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-date">
+                          <span class="tooltip-text">Укажите дату доставки</span>
+                        </span>
+                      </span>
+                    </span>
+                    <!-- Для неактивного состояния повесить disabled -->
+                    <!-- Для вызова ошибки добавить класс delivery-error -->
+                    <input class="inputs-delivery inputs-date" type="text" name="delivery-inputs-date"
+                      id="delivery-inputs-date" placeholder="01.04.2020" required>
+                  </div>
+                  <div class="wrapper-phone">
+                    <label class="label-phone title-form" for="delivery-inputs-phone">Телефон</label>
+                    <!-- Для неактивного состояния повесить disabled -->
+                    <!-- Для вызова ошибки добавить класс delivery-error -->
+                    <input class="inputs-delivery inputs-phone" type="tel" name="delivery-inputs-phone"
+                      id="delivery-inputs-phone" placeholder="+7 800 999-00-00" required>
+                  </div>
+                </div>
+                <div class="wrapper-address">
+                  <span class="label-address">
+                    <label class="label-address title-form" for="delivery-inputs-address">Адрес</label>
+                    <span class="tooltip" aria-labelledby="tooltip-address">
+                      <button class="tooltip-button" aria-labelledby="tooltip-address" type="button"></button>
+                      <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-address">
+                        <span class="tooltip-text">Введите название улицы, дома и&nbsp;квартиры</span>
                       </span>
                     </span>
                   </span>
                   <!-- Для неактивного состояния повесить disabled -->
                   <!-- Для вызова ошибки добавить класс delivery-error -->
-                  <input class="inputs-delivery inputs-date" type="text" name="delivery-inputs-date"
-                    id="delivery-inputs-date" placeholder="01.04.2020" required>
-                </div>
-                <div class="wrapper-phone">
-                  <label class="label-phone title-form" for="delivery-inputs-phone">Телефон</label>
-                  <!-- Для неактивного состояния повесить disabled -->
-                  <!-- Для вызова ошибки добавить класс delivery-error -->
-                  <input class="inputs-delivery inputs-phone" type="tel" name="delivery-inputs-phone"
-                    id="delivery-inputs-phone" placeholder="+7 800 999-00-00" required>
+                  <input class="inputs-delivery inputs-address" type="text" name="delivery-inputs-address"
+                    id="delivery-inputs-address" placeholder="ул. Большая Конюшенная, 19/8" required>
                 </div>
               </div>
-              <div class="wrapper-address">
-                <span class="label-address">
-                  <label class="label-address title-form" for="delivery-inputs-address">Адрес</label>
-                  <span class="tooltip" aria-labelledby="tooltip-address">
-                    <button class="tooltip-button" aria-labelledby="tooltip-address" type="button"></button>
-                    <span class="tooltip-text-wrapper" role="tooltip" id="tooltip-address">
-                      <span class="tooltip-text">Введите название улицы, дома и&nbsp;квартиры</span>
-                    </span>
-                  </span>
-                </span>
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс delivery-error -->
-                <input class="inputs-delivery inputs-address" type="text" name="delivery-inputs-address"
-                  id="delivery-inputs-address" placeholder="ул. Большая Конюшенная, 19/8" required>
-              </div>
-                </div>
               <button class="button-form delivery-button-form" type="submit">Отправить</button>
             </form>
           </div>
@@ -528,11 +530,18 @@
           <h2 class="visually-hidden">Обратная связь.</h2>
           <div class="feedback-wrapper">
             <div class="feedback-content">
-              <h3 class="description-text feedback-address-title">Адрес главного офиса и офлайн-магазина:</h3>
-              <address class="feedback-area feedback-address">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
-              <h3 class="description-text feedback-text-phone">Для заказов по телефону:</h3>
-              <a class="feedback-area feedback-number-title" href="tel:+78128121212">+7 (812) 812-12-12</a>
-              <span class="weight-styles number-phone-text">(с 10 до 20 ежедневно)</span>
+              <div class="address-wrapper">
+                <h3 class="description-text feedback-address-title">Адрес главного офиса и офлайн-магазина:</h3>
+                <address class="feedback-area feedback-address">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург
+                </address>
+              </div>
+              <div class="feedback-phone-wrapper">
+                <h3 class="description-text feedback-text-phone">Для заказов по телефону:</h3>
+                <div class="wrapper-phone-mumber">
+                  <a class="feedback-area feedback-number-title" href="tel:+78128121212">+7 (812) 812-12-12</a>
+                  <span class="weight-styles number-phone-text">(с 10 до 20 ежедневно)</span>
+                </div>
+              </div>
               <!-- Для неактивного состояния удалить href -->
               <a class="feedback-button" href="#">Форма обратной связи</a>
             </div>
@@ -606,18 +615,20 @@
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <!-- Для неактивного состояния повесить disabled -->
-            <!-- Для вызова ошибки добавить класс modal-error -->
-            <input class="inputs-modal modal-input-name" type="text" name="input-modal-name" placeholder="Имя и фамилия"
-              required aria-label="Введите ваше имя и фамилию.">
-            <!-- Для неактивного состояния повесить disabled -->
-            <!-- Для вызова ошибки добавить класс modal-error -->
-            <input class="inputs-modal modal-input-mail" type="email" name="input-modal-mail"
-              placeholder="email@example.com" required aria-label="Введите ваш e-mail.">
-            <!-- Для неактивного состояния повесить disabled -->
-            <!-- Для вызова ошибки добавить класс modal-error -->
-            <textarea class="inputs-modal modal-input-free" name="text-area-form" placeholder="В свободной форме"
-              rows="6" required aria-label="Ваше обращение В свободной форме."></textarea>
+            <div class="modal-wrapper">
+              <!-- Для неактивного состояния повесить disabled -->
+              <!-- Для вызова ошибки добавить класс modal-error -->
+              <input class="inputs-modal modal-input-name" type="text" name="input-modal-name"
+                placeholder="Имя и фамилия" required aria-label="Введите ваше имя и фамилию.">
+              <!-- Для неактивного состояния повесить disabled -->
+              <!-- Для вызова ошибки добавить класс modal-error -->
+              <input class="inputs-modal modal-input-mail" type="email" name="input-modal-mail"
+                placeholder="email@example.com" required aria-label="Введите ваш e-mail.">
+              <!-- Для неактивного состояния повесить disabled -->
+              <!-- Для вызова ошибки добавить класс modal-error -->
+              <textarea class="inputs-modal modal-input-free" name="text-area-form" placeholder="В свободной форме"
+                rows="6" required aria-label="Ваше обращение В свободной форме."></textarea>
+            </div>
             <button class="button-form button-send" type="submit">Отправить</button>
           </form>
         </div>
