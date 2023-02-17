@@ -330,8 +330,8 @@ body {
 .button-search::before {
   position: absolute;
   content: "";
-  -webkit-mask: url("../images/svg/Search-icon.svg");
-  mask: url("../images/svg/Search-icon.svg");
+  -webkit-mask: url("../images/svg/search-icon.svg");
+  mask: url("../images/svg/search-icon.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
