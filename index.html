@@ -62,6 +62,9 @@
                 <!-- Для вызова ошибки добавить класс dropdown-search-error -->
                 <input class="dropdown-search-input" name="dropdown-search-input" type="search"
                   placeholder="Поиск по сайту" aria-label="Поиск по сайту.">
+                <button class="button-reset" type="button">
+                  <span class="visually-hidden">Удалить текст.</span>
+                </button>
               </form>
             </div>
             <div class="dropdown-login">
@@ -170,8 +173,7 @@
           <h1 class="visually-hidden">Фотогалерея товаров.</h1>
           <div class="slider-wrapper">
             <ul class="slider-card-list">
-              <!-- Добавить класс slider-card-item-active, чтобы увидеть следюущий слайд -->
-              <li class="slider-card-item slider-card-item-active">
+              <li class="slider-card-item slider-card-item-active" data-theme="#feafc3">
                 <div class="slider-content">
                   <h2 class="slider-card-title">Нежный пломбир с&nbsp;клубничным джемом</h2>
                   <p class="slider-description">Натуральное мороженое из&nbsp;свежих сливок
@@ -185,8 +187,7 @@
                     alt="Рожок клубничного мороженого." width="306" height="507">
                 </div>
               </li>
-              <!-- Добавить класс slider-card-item-active, чтобы увидеть следюущий слайд -->
-              <li class="slider-card-item">
+              <li class="slider-card-item" data-theme="#69a9ff">
                 <div class="slider-content">
                   <h2 class="slider-card-title">Сливочное мороженое со&nbsp;вкусом банана</h2>
                   <p class="slider-description">Сливочное мороженое с&nbsp;ярким банановым вкусом подарит
@@ -199,8 +200,7 @@
                     alt="Рожок бананового мороженого." width="306" height="507">
                 </div>
               </li>
-              <!-- Добавить класс slider-card-item-active, чтобы увидеть следюущий слайд -->
-              <li class="slider-card-item">
+              <li class="slider-card-item" data-theme="#fcc850">
                 <div class="slider-content">
                   <h2 class="slider-card-title">Карамельный пломбир с&nbsp;маршмеллоу</h2>
                   <p class="slider-description">Необычный сладкий десерт с&nbsp;карамельным топпингом и
@@ -217,7 +217,7 @@
 
             <div class="slider-controls">
               <!-- Для неактивного состояния добавить disabled -->
-              <button class="button-slider" type="button">
+              <button class="button-slider button-slider-preview" type="button">
                 <svg class="arrow-icon" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
                   <path fill-rule="evenodd"
@@ -227,7 +227,7 @@
                 <span class="visually-hidden">Предыдущий товар.</span>
               </button>
               <!-- Для неактивного состояния добавить disabled -->
-              <button class="button-slider button-slider-rotate" type="button">
+              <button class="button-slider button-slider-next" type="button">
                 <svg class="arrow-icon" aria-hidden="true" focusable="false" role="img"
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
                   <path fill-rule="evenodd"
@@ -477,6 +477,7 @@
               <p class="description-text delivery-description-form">Укажите адрес и&nbsp;дату доставки,
                 и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы
                 подтвердить заказ.</p>
+                <div class="inputs-wrapper">
               <div class="wrapper-content-form">
                 <div class="wrapper-form-contacts">
                   <span class="label-date form-label-icon">
@@ -516,6 +517,7 @@
                 <input class="inputs-delivery inputs-address" type="text" name="delivery-inputs-address"
                   id="delivery-inputs-address" placeholder="ул. Большая Конюшенная, 19/8" required>
               </div>
+                </div>
               <button class="button-form delivery-button-form" type="submit">Отправить</button>
             </form>
           </div>
@@ -531,7 +533,8 @@
               <h3 class="description-text feedback-text-phone">Для заказов по телефону:</h3>
               <a class="feedback-area feedback-number-title" href="tel:+78128121212">+7 (812) 812-12-12</a>
               <span class="weight-styles number-phone-text">(с 10 до 20 ежедневно)</span>
-              <button class="button-form feedback-button" type="button">Форма обратной связи</button>
+              <!-- Для неактивного состояния удалить href -->
+              <a class="feedback-button" href="#">Форма обратной связи</a>
             </div>
           </div>
         </div>
@@ -593,8 +596,7 @@
         </div>
       </div>
     </footer>
-    <!-- Для просмотра модального окна удалить класс modal-close-state -->
-    <div class="modal modal-close-state">
+    <div class="modal modal-close">
       <div class="modal-overlay"></div>
       <div class="modal-content">
         <div class="modal-inner">
@@ -604,34 +606,24 @@
             <span class="visually-hidden">Закрыть.</span>
           </button>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="modal-id">
-              <div class="modal-name-wrapper">
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс modal-error -->
-                <input class="inputs-modal modal-input-name" type="text" name="input-modal-name"
-                  placeholder="Имя и фамилия" required aria-label="Введите ваше имя и фамилию.">
-              </div>
-              <div class="modal-mail-wrapper">
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс modal-error -->
-                <input class="inputs-modal modal-input-mail" type="email" name="input-modal-mail"
-                  placeholder="email@example.com" required aria-label="Введите ваш e-mail.">
-              </div>
-            </div>
-            <div class="modal-text-area">
-              <div class="modal-free-wrapper">
-                <!-- Для неактивного состояния повесить disabled -->
-                <!-- Для вызова ошибки добавить класс modal-error -->
-                <textarea class="inputs-modal modal-input-free" name="text-area-form" placeholder="В свободной форме"
-                  rows="6" required aria-label="Что нужно привезти."></textarea>
-              </div>
-            </div>
+            <!-- Для неактивного состояния повесить disabled -->
+            <!-- Для вызова ошибки добавить класс modal-error -->
+            <input class="inputs-modal modal-input-name" type="text" name="input-modal-name" placeholder="Имя и фамилия"
+              required aria-label="Введите ваше имя и фамилию.">
+            <!-- Для неактивного состояния повесить disabled -->
+            <!-- Для вызова ошибки добавить класс modal-error -->
+            <input class="inputs-modal modal-input-mail" type="email" name="input-modal-mail"
+              placeholder="email@example.com" required aria-label="Введите ваш e-mail.">
+            <!-- Для неактивного состояния повесить disabled -->
+            <!-- Для вызова ошибки добавить класс modal-error -->
+            <textarea class="inputs-modal modal-input-free" name="text-area-form" placeholder="В свободной форме"
+              rows="6" required aria-label="Ваше обращение В свободной форме."></textarea>
             <button class="button-form button-send" type="submit">Отправить</button>
           </form>
         </div>
       </div>
     </div>
-
+    <script src="./js/index.js"></script>
   </body>
 
 </html>
