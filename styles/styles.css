@@ -2438,6 +2438,7 @@ body {
 .button-send {
   display: block;
   margin-left: auto;
+  max-width: 250px;
 }
 
 /* catalog */
@@ -3091,7 +3092,7 @@ body {
 }
 
 .loading-red {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 
