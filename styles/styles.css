@@ -350,7 +350,7 @@ body {
   background-color: #ff4a78;
 }
 
-.button-search .icon-search:active {
+.button-search:active .icon-search {
   fill: #fcfcfc;
 }
 
