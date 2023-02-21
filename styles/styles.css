@@ -222,6 +222,11 @@ body {
   display: flex;
 }
 
+.dropdown-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .dropdown-list {
   display: none;
   flex-direction: column;
@@ -230,7 +235,7 @@ body {
   margin: 0;
   padding: 9px 0;
   list-style-type: none;
-  background: #fcfcfc;
+  background-color: #fcfcfc;
   box-shadow: 0 8px 16px rgb(45 52 64 / 12%);
   border-radius: 4px;
   transform: translate(1px, 7px);
@@ -375,6 +380,11 @@ body {
   fill: #2d3440;
 }
 
+.button-search:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .icon-login {
   position: relative;
   top: 2px;
@@ -443,6 +453,11 @@ body {
 
 .dropdown-login:focus-within .buttons-login:not(:focus) .icon-login {
   fill: #2d3440;
+}
+
+.buttons-login:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .dropdown-login:focus-within .login-form {
@@ -518,6 +533,11 @@ body {
 
 .dropdown-basket:focus-within .basket-buttons:not(:focus) .icon-basket {
   fill: #2d3440;
+}
+
+.basket-buttons:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .cart-full {
@@ -617,6 +637,11 @@ body {
 
 .button-reset:active {
   opacity: 0.9;
+}
+
+.button-reset:disabled {
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .dropdown-search-input:hover {
@@ -2155,7 +2180,7 @@ body {
 
 .faq-dropdown-link:focus-visible {
   outline: 2px solid #2d3440;
-  outline-offset: 2px;
+  outline-offset: 1px;
   border-radius: 4px;
   border: none;
   text-decoration: none;
@@ -2547,7 +2572,6 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #2d3440;
-  cursor: pointer;
 }
 
 .sorting-area {
@@ -2564,7 +2588,7 @@ body {
 }
 
 .sorting-area .sorting-area-title {
-  max-width: 217px;
+  max-width: 250px;
 }
 
 .catalog-price .sorting-area-title {
@@ -2589,7 +2613,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 13px center;
   cursor: pointer;
-  max-width: 196px;
+  max-width: 250px;
 }
 
 .select-sorting:hover {
@@ -2731,10 +2755,13 @@ body {
 }
 
 .control {
-  padding-left: 24px;
   position: relative;
   display: inline-flex;
   cursor: pointer;
+}
+
+.sorting-label {
+  padding-left: 24px;
 }
 
 .control-radio {
@@ -2749,7 +2776,6 @@ body {
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .control-radio::before {
@@ -2766,36 +2792,39 @@ body {
   display: block;
 }
 
-.control:hover .control-radio {
+.input-calories:hover + .control-radio {
   border: 2px solid #fcfcfc;
 }
 
-.control:hover .control-radio::before {
+.input-calories:hover + .control-radio::before {
   background-color: #fcfcfc;
 }
 
-.control:active .control-radio {
+.input-calories:active + .control-radio {
   border: 2px solid #fcfcfc;
   opacity: 0.6;
 }
 
-.input-calories:focus + .control-radio {
+.input-calories:focus-visible + .control-radio {
   border: 2px solid #fcfcfc;
 }
 
-.input-calories:focus + .control-radio::before {
+.input-calories:focus-visible + .control-radio::before {
   background-color: #fcfcfc;
 }
 
 .input-calories:disabled + .control-radio {
   border: 2px solid #2d3440;
   opacity: 0.5;
-  pointer-events: none;
+  cursor: auto;
 }
 
 .input-calories:disabled + .control-radio::before {
-  background: #2d3440;
-  pointer-events: none;
+  background-color: #2d3440;
+}
+
+.input-calories:disabled ~ .sorting-styles {
+  cursor: auto;
 }
 
 .filling-list {
@@ -2818,7 +2847,6 @@ body {
   position: relative;
   display: inline-flex;
   cursor: pointer;
-  gap: 8px;
 }
 
 .control-mark-uncheck {
@@ -2852,6 +2880,10 @@ body {
   display: none;
 }
 
+.control-label {
+  padding-left: 8px;
+}
+
 .filling-input[type="checkbox"]:checked ~ .control-mark-check {
   display: flex;
 }
@@ -2876,11 +2908,15 @@ body {
   fill: #fcfcfc;
 }
 
-.filling-input[type="checkbox"]:disabled + .control-mark-uncheck,
-.filling-input[type="checkbox"]:disabled ~ .control-mark-check {
+.filling-input[type="checkbox"]:disabled + .control-mark-uncheck .icon-checkbox-uncheck,
+.filling-input[type="checkbox"]:disabled ~ .control-mark-check .icon-checkbox-check {
   fill: #2d3440;
   opacity: 0.5;
-  pointer-events: none;
+  cursor: auto;
+}
+
+.filling-input[type="checkbox"]:disabled ~ .control-label {
+  cursor: auto;
 }
 
 .sorting-button {
@@ -2989,6 +3025,11 @@ body {
   color: #b9b9b9;
 }
 
+.pagination-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .pagination-list {
   margin: 0;
   padding: 10px 0;
@@ -3013,19 +3054,21 @@ body {
   display: block;
 }
 
-.pagination-arrow:not([href]) {
-  pointer-events: none;
-  opacity: 0.3;
-}
-
 .arrow-preview {
   transform: rotate(90deg);
-  background-position: right 4px top 7px;
+  background-position: right 4px top 2px;
+  position: relative;
+  top: 10px;
+  right: 4px;
+  opacity: 0.3;
 }
 
 .arrow-next {
   transform: rotate(-90deg);
-  background-position: right 4px top 7px;
+  background-position: right 4px top 2px;
+  position: relative;
+  top: 10px;
+  left: 5px;
 }
 
 .pagination-arrow:hover {
@@ -3040,6 +3083,11 @@ body {
   background-color: rgba(252, 252, 252, 0.3);
   outline: 1px solid #2d3440;
   outline-offset: -1px;
+}
+
+.pagination-arrow:not([href]) {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 .pagination-link {
@@ -3058,6 +3106,7 @@ body {
 .pagination-active {
   background-color: #fcfcfc;
   border-radius: 50px;
+  pointer-events: none;
 }
 
 .pagination-link:hover {
@@ -3076,12 +3125,6 @@ body {
   outline: 1px solid #2d3440;
   outline-offset: -1px;
   border-radius: 50px;
-}
-
-.pagination-active:not([href]) {
-  background-color: #fcfcfc;
-  border-radius: 50px;
-  pointer-events: none;
 }
 
 /* spinner */
