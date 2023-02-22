@@ -45,10 +45,10 @@ html {
 
 .container {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1270px;
   margin: 0 auto;
-  padding-left: 98px;
-  padding-right: 98px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 body {
@@ -62,7 +62,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  min-width: 1366px;
+  min-width: 1270px;
 }
 
 /* header */
@@ -168,54 +168,25 @@ body {
   border-radius: 30px;
 }
 
-.dropdown-button:active {
+.dropdown-button:focus-within {
   background-color: #ff4a78;
-  color: #fcfcfc;
   border-radius: 30px;
-}
-
-.dropdown-button:active .icon-arrow-catalog {
-  fill: #fcfcfc;
-  transform: rotate(180deg);
-  top: 4px;
-}
-
-.dropdown-button:focus-visible {
-  background-color: #ff4a78;
-  color: #fcfcfc;
-  border-radius: 30px;
-  border: none;
   outline: none;
-}
-
-.dropdown-button:focus-visible .icon-arrow-catalog {
-  fill: #fcfcfc;
-  transform: rotate(180deg);
-  top: 4px;
-}
-
-.navigation-dropdown:focus-within .dropdown-button:not(:active) {
-  background-color: #ff4a78;
   color: #fcfcfc;
-  border-radius: 30px;
 }
 
-.navigation-dropdown:focus-within .dropdown-button:not(:active) .icon-arrow-catalog {
-  fill: #fcfcfc;
+.navigation-dropdown:focus-within .icon-arrow-catalog {
   transform: rotate(180deg);
   top: 4px;
+}
+
+.dropdown-button:focus-within .icon-arrow-catalog {
+  fill: #fcfcfc;
 }
 
 .navigation-dropdown:focus-within .dropdown-button:not(:focus) {
   background-color: #fcfcfc;
   border-radius: 30px;
-  color: #2d3440;
-}
-
-.navigation-dropdown:focus-within .dropdown-button:not(:focus) .icon-arrow-catalog {
-  transform: rotate(180deg);
-  fill: #2d3440;
-  top: 4px;
 }
 
 .navigation-dropdown:focus-within .dropdown-list {
@@ -333,12 +304,12 @@ body {
   padding: 8px;
   width: 32px;
   height: 32px;
-  background-color: rgba(252, 252, 252, 0.3);
   border-radius: 27px;
   border: none;
   cursor: pointer;
   position: relative;
   display: flex;
+  background-color: transparent;
 }
 
 .icon-search {
@@ -347,37 +318,26 @@ body {
   fill: #2d3440;
 }
 
+.dropdown-search {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+}
+
 .button-search:hover {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
-.button-search:active {
+.button-search:focus-within {
   background-color: #ff4a78;
-}
-
-.button-search:active .icon-search {
-  fill: #fcfcfc;
-}
-
-.button-search:focus-visible {
-  background-color: rgba(252, 252, 252, 0.5);
   outline: none;
 }
 
-.dropdown-search:focus-within .button-search:not(:active) {
-  background-color: #ff4a78;
-}
-
-.dropdown-search:focus-within .button-search:not(:active) .icon-search {
+.button-search:focus-within .icon-search {
   fill: #fcfcfc;
 }
 
 .dropdown-search:focus-within .button-search:not(:focus) {
   background-color: #fcfcfc;
-}
-
-.dropdown-search:focus-within .button-search:not(:focus) .icon-search {
-  fill: #2d3440;
 }
 
 .button-search:disabled {
@@ -405,54 +365,36 @@ body {
   color: #2d3440;
   text-decoration: none;
   position: relative;
-  padding: 5px 16px 6px 18px;
-  background: rgba(252, 252, 252, 0.3);
   border-radius: 30px;
+  padding: 5px 16px 6px 18px;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   min-width: 88px;
   max-width: 150px;
 }
 
+.dropdown-login {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+}
+
 .buttons-login:hover {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
-.buttons-login:active {
-  background-color: #ff4a78;
-  color: #fcfcfc;
-}
-
-.buttons-login:active .icon-login {
-  fill: #fcfcfc;
-}
-
-.buttons-login:focus-visible {
+.buttons-login:focus-within {
   background-color: #ff4a78;
   outline: none;
   color: #fcfcfc;
 }
 
-.buttons-login:focus-visible .icon-login {
-  fill: #fcfcfc;
-}
-
-.dropdown-login:focus-within .buttons-login:not(:active) {
-  background-color: #ff4a78;
-  color: #fcfcfc;
-}
-
-.dropdown-login:focus-within .buttons-login:not(:active) .icon-login {
+.buttons-login:focus-within .icon-login {
   fill: #fcfcfc;
 }
 
 .dropdown-login:focus-within .buttons-login:not(:focus) {
   background-color: #fcfcfc;
-  color: #2d3440;
-}
-
-.dropdown-login:focus-within .buttons-login:not(:focus) .icon-login {
-  fill: #2d3440;
 }
 
 .buttons-login:disabled {
@@ -487,52 +429,35 @@ body {
   position: relative;
   border: none;
   cursor: pointer;
-  background: rgba(252, 252, 252, 0.3);
+  background-color: transparent;
   border-radius: 30px;
   padding: 5px 16px 6px 18px;
   min-width: 115px;
   max-width: 150px;
 }
 
+.dropdown-basket {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+}
+
 .basket-buttons:hover {
   background-color: rgba(252, 252, 252, 0.5);
 }
 
-.basket-buttons:active {
-  background-color: #ff4a78;
-  color: #fcfcfc;
-}
 
-.basket-buttons:active .icon-basket {
-  fill: #fcfcfc;
-}
-
-.basket-buttons:focus-visible {
+.basket-buttons:focus-within {
   background-color: #ff4a78;
   outline: none;
   color: #fcfcfc;
 }
 
-.basket-buttons:focus-visible .icon-basket {
-  fill: #fcfcfc;
-}
-
-.dropdown-basket:focus-within .basket-buttons:not(:active) {
-  background-color: #ff4a78;
-  color: #fcfcfc;
-}
-
-.dropdown-basket:focus-within .basket-buttons:not(:active) .icon-basket {
+.basket-buttons:focus-within .icon-basket {
   fill: #fcfcfc;
 }
 
 .dropdown-basket:focus-within .basket-buttons:not(:focus) {
   background-color: #fcfcfc;
-  color: #2d3440;
-}
-
-.dropdown-basket:focus-within .basket-buttons:not(:focus) .icon-basket {
-  fill: #2d3440;
 }
 
 .basket-buttons:disabled {
