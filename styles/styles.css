@@ -45,10 +45,10 @@ html {
 
 .container {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1270px;
   margin: 0 auto;
-  padding-left: 98px;
-  padding-right: 98px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 body {
@@ -62,7 +62,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  min-width: 1366px;
+  min-width: 1270px;
 }
 
 /* header */
